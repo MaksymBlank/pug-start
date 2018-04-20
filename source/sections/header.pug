@@ -1,0 +1,32 @@
+nav(role="navigation").navbar.navbar-default
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+        button(type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse").navbar-toogle
+            span.sr-only Toogle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        a(href="#").navbar-brand Title
+    // Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-ex1-collapse
+        ul.nav.navbar-nav
+            li.active
+                a(href="#") Link
+            li
+                a(href="#") Link
+        form(role="search").navbar-form.navbar-left
+            .form-group
+                input(type="text" placeholder="Search").form-control
+            button(type="submit").btn.btn-default Submit
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href="#") Link
+            li.dropdown
+                a(href="#" data-toggle="dropdown").dropdown-toogle
+                    | Dropdown
+                    b.caret
+                ul.dropdown-menu
+                    li: a(href="#") Action
+                    li: a(href="#") Another action
+                    li: a(href="#") Something else here
+                    li: a(href="#") Separated link

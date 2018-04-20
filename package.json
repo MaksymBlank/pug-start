@@ -1,0 +1,37 @@
+{
+  "name": "pug-start",
+  "version": "1.0.0",
+  "description": "CLI tool for Pug templates.",
+  "bin": {
+    "pg-cli": "./bin/pug-start.js"
+  },
+  "keywords": [
+    "pug",
+    "layout",
+    "default",
+    "base",
+    "cli",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaksymBlank/pug-start.git"
+  },
+  "author": "Maksym Blank",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "cli-spinner": "^0.2.8",
+    "events": "^2.0.0",
+    "inquirer": "^5.2.0",
+    "lodash": "^4.17.5",
+    "meow": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.85.0",
+    "shelljs": "^0.8.1"
+  },
+  "bugs": {
+    "url": "https://github.com/MaksymBlank/pug-start/issues"
+  },
+  "homepage": "https://github.com/MaksymBlank/pug-start"
+}

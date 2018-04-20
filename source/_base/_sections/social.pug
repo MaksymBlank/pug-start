@@ -1,0 +1,33 @@
+// START Itemprop
+if config.name
+    meta(itemprop="name" content=config.name)
+if config.url
+    meta(itemprop="url" content=config.url)
+if config.description
+    meta(itemprop="description" content=config.description)
+if config.image
+    meta(itemprop="image" content=config.image)
+// END Itemprop
+
+// START twitter data
+meta(name="twitter:card" content="summary")
+if config.url
+    meta(name="twitter:url" content=config.url)
+if config.title
+    meta(name="twitter:title" content=config.title)
+if config.description
+    meta(name="twitter:description" content=config.description)
+// END twitter data
+
+
+// START Open Graph data
+if config.title
+    meta(property="og:title" content=config.title)
+meta(property="og:type" content="website")
+if config.url
+    meta(property="og:url" content=config.url)
+if config.image
+    meta(property="og:image" content=config.image) 
+if config.description
+    meta(property="og:description" content=config.description)
+// END Open Graph data

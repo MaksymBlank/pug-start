@@ -1,0 +1,64 @@
+//- Includes googleAnalytics script
+include ./_sections/_googleAnalytics
+
+//- Default meta tags
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+//- Description, keywords and robots from config
+if config.description
+    meta(name="description" content=config.description)
+
+if config.robots
+    meta(name="robots" content=config.robots)
+
+if config.keywords
+    meta(name="keywords" content=config.keywords)
+
+//- Title of the page
+if config.title
+    title= config.title
+else
+    title= "Awesome website"
+
+
+if config.appleMobileWebAppCapable
+    // START Apple meta 
+    // To run web application in full-screen
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    // END Apple meta 
+
+if config.browserConfig
+    // START Microsoft Tiles
+    meta(name="msapplication-config" content=config.browserConfig)
+    // END Microsoft Tiles
+
+if config.favicon
+    // START Favicon  
+    include ./_sections/favicon
+    // END Favicon 
+
+if config.social
+    // START Social  
+    include ./_sections/social
+    // END Social 
+
+if config.cdn
+    include ./_sections/cdn
+
+if config.fonts
+    include ./_sections/fonts
+
+if config.css
+    // START CSS files
+    each item in config.css
+        link(rel="stylesheet", href=item)
+    // END CSS files
+
+if config.crossBrowser
+    include ./_sections/crossBrowser
+
+if config.beforeScripts
+    // START JS scripts that have to be in head of the document
+    include ./_sections/beforeScripts

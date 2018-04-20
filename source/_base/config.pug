@@ -1,0 +1,29 @@
+-
+    var config = {
+        // Main properties
+        title: "Your title", // title
+        keywords: "list, of, your, keywords",
+        description: "Description of your website.",
+        robots: "index, follow",
+        googleAnalyticsId: "UA-1111111-1", // leave empty if you don't have google analytics
+        css: ["css/main.css", 'css/ie.css'], // Array<String> | Path to your css files
+        browserConfig: "browserconfig.xml", // Default. Change if you have a browserconfig elsewhere. Comment if you do not have one.
+        
+        //- Social
+        name: "Name_Of_Your_Project", // name for social
+        url: "https://example.com", // url for social
+        image: "/images/android-icon-192x192.png", // image for social
+
+        // Additional properties
+        footer: true,           // True if you want to include ./../sections/footer.pug to your template
+        header: true,           // True if you want to include ./../sections/header.pug to your template
+        social: true,           // True if you want to include ./social.pug
+        favicon: true,          // True if you want to include ./favicon.pug
+        afterScripts: true,     // True if you want to include ./afterScripts.pug in the end of your template
+        beforeScripts: true,    // True if you want to include ./beforeScripts.pug in the head of your template
+        crossBrowser: true,    // True if you want to include ./crossBrowser.pug
+        cdn: true,             // True if you want to include ./cdn.pug
+        fonts: true,            // True if you want to include ./fonts.pug
+        itemscope: true,        // True if you want to add itemscope and itemtype attrs
+        appleMobileWebAppCapable: true // sets <meta name="apple-mobile-web-app-capable" content="yes"> if true
+    };

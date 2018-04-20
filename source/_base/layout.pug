@@ -1,0 +1,23 @@
+//- All template configurations
+block config
+
+<!DOCTYPE html>
+<!-- Doctype HTML5 -->
+html(lang='en' itemscope=config.itemscope itemtype=config.itemscope ? 'http://schema.org/Website' : false)
+    head
+        //- Include Head
+        include head
+    body
+        //- Include Header
+        if config.header
+            header.header
+                include ./../sections/header
+        main
+            block main
+        if config.footer
+            include ./../sections/footer
+        
+        //- Last thing that would be loaded
+        if config.afterScripts
+            footer.footer
+                include ./_sections/afterScripts

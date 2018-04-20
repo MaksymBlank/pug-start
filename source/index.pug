@@ -1,0 +1,12 @@
+extends _base/layout
+
+//- Include all files
+//- All configurations for the template
+block config
+    include _base/config
+
+    //- If you want to change default configs, just set the properties here
+    - config.title = 'New title';
+
+block main
+    h1 Hello world
