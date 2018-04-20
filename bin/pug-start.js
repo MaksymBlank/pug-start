@@ -14,6 +14,7 @@ const async = require('async');
 const Spinner = require('cli-spinner').Spinner;
 
 const SOURCE_PUGS = path.resolve(process.cwd(), './node_modules/pug-start', './source/_base');
+const packageJSON = require(path.resolve(process.cwd(), 'package.json'));
 
 /**
  * Initialize CLI
@@ -251,11 +252,11 @@ const initSections = (answers, callback) =>{
             mkdirp.sync(sectionsPath);            
         }
 
-        if(answers.footer && !fs.existsSync(path.resolve(sectionsPath, 'footer.pug')) || !fs.statSync(path.resolve(sectionsPath, 'footer.pug')).isFile()){
+        if(answers.footer && (!fs.existsSync(path.resolve(sectionsPath, 'footer.pug')) || !fs.statSync(path.resolve(sectionsPath, 'footer.pug')).isFile())){
             if(shell.cp(path.resolve(sourcePath, 'footer.pug'), sectionsPath).code !== 0) throw Error('no file');
         }
 
-        if(answers.header && !fs.existsSync(path.resolve(sectionsPath, 'header.pug')) || !fs.statSync(path.resolve(sectionsPath, 'header.pug')).isFile()){
+        if(answers.header && (!fs.existsSync(path.resolve(sectionsPath, 'header.pug')) || !fs.statSync(path.resolve(sectionsPath, 'header.pug')).isFile())){
             if(shell.cp(path.resolve(sourcePath, 'header.pug'), sectionsPath).code !== 0) throw Error('no file');
         }
 
@@ -632,10 +633,10 @@ var emitter = eventEmitter();
 /**
  * If package.json doesn't exist or pug-start doesn't exist in it
  */
-if(!cli.pkg){
+if(!packageJSON){
     emitter.emit('error', `Package.json hasn't been found`)
 }
-if(!cli.pkg.dependencies || !cli.pkg.dependencies["pug-start"]){
+if(!packageJSON.dependencies || !packageJSON.dependencies["pug-start"]){
     emitter.emit('error', `'pug-start' hasn't been found in package.json. Please run 'npm i --save pug-start'`);
 }
 
