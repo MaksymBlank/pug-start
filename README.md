@@ -4,7 +4,7 @@ CLI tool for Pug templates.
 ## Installing
 
 ### npm
-To install sass-table-stylization using npm, simply run:
+To install pug-start using npm, simply run:
 ```js
 $ npm i --save -g pug-start
 ```
